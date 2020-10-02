@@ -11,7 +11,8 @@ buildscript {
 
     dependencies {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.0")
-        classpath("com.android.tools.build:gradle:4.0.1")
+        // change gradle build version to 2.2.3 to make sure it's usable in older projects
+        classpath("com.android.tools.build:gradle:2.2.3")
         classpath("com.otaliastudios.tools:publisher:0.3.3")
     }
 }

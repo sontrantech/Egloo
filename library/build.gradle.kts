@@ -60,7 +60,7 @@ kotlin {
     sourceSets {
         getByName("androidJvmMain") {
             dependencies {
-                api("androidx.annotation:annotation:1.1.0")
+                api("com.android.support:support-annotations:28.0.0")
             }
         }
         configureEach {
@@ -80,7 +80,7 @@ android {
     defaultConfig {
         setMinSdkVersion(property("androidMinSdkVersion") as Int)
         setTargetSdkVersion(property("androidTargetSdkVersion") as Int)
-        versionName = "0.5.3"
+        versionName = "0.5.3-noandroidx-rc1"
     }
     buildTypes["release"].consumerProguardFile("proguard-rules.pro")
     sourceSets["main"].java.srcDirs("src/androidJvmMain/kotlin")
@@ -90,10 +90,10 @@ android {
 // Publishing
 
 publisher {
-    project.group = "com.otaliastudios.opengl"
+    project.group = "com.sontrantech.opengl"
     project.description = "Simple and lightweight OpenGL ES drawing and EGL management for Android, with object-oriented components based on Google's Grafika."
-    project.url = "https://github.com/natario1/Egloo"
-    project.vcsUrl = "https://github.com/natario1/Egloo.git"
+    project.url = "https://github.com/sontrantech/Egloo"
+    project.vcsUrl = "https://github.com/sontrantech/Egloo.git"
     project.addLicense(License.MIT)
     val dir = "../prebuilt"
 

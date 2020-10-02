@@ -9,13 +9,13 @@ import android.graphics.SurfaceTexture
 import android.net.Uri
 import android.opengl.GLES20
 import android.opengl.GLSurfaceView
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.view.*
 import android.widget.Toast
 import com.google.android.exoplayer2.ExoPlayerFactory
 import com.google.android.exoplayer2.SimpleExoPlayer
-import com.google.android.exoplayer2.source.ProgressiveMediaSource
+import com.google.android.exoplayer2.source.ExtractorMediaSource
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
 import com.google.android.exoplayer2.util.Util
 import com.google.android.exoplayer2.video.VideoListener
@@ -77,7 +77,7 @@ class VideoActivity : AppCompatActivity(), GLSurfaceView.Renderer {
         player = ExoPlayerFactory.newSimpleInstance(this)
         val dataSourceFactory = DefaultDataSourceFactory(this,
                 Util.getUserAgent(this, "Egloo"))
-        val videoSource = ProgressiveMediaSource.Factory(dataSourceFactory)
+        val videoSource = ExtractorMediaSource.Factory(dataSourceFactory)
                 // .createMediaSource(Uri.parse("https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"))
                 .createMediaSource(Uri.parse("http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"))
         player.prepare(videoSource)

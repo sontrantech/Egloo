@@ -5,7 +5,6 @@ package com.otaliastudios.opengl.internal
 import android.opengl.GLU
 import android.opengl.Matrix
 import android.util.Log
-import androidx.annotation.RequiresApi
 
 internal actual inline fun logv(tag: String, message: String) { Log.v(tag, message) }
 internal actual inline fun logi(tag: String, message: String) { Log.i(tag, message) }

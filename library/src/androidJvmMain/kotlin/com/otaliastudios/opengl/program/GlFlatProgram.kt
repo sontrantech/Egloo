@@ -1,7 +1,7 @@
 package com.otaliastudios.opengl.program
 
 import android.graphics.Color
-import androidx.annotation.ColorInt
+import android.support.annotation.ColorInt
 
 public actual class GlFlatProgram : GlNativeFlatProgram() {
 

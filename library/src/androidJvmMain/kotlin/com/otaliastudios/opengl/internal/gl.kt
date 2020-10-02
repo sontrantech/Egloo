@@ -7,7 +7,7 @@ import android.opengl.GLES20
 import android.opengl.GLES30
 import android.opengl.GLES31
 import android.os.Build
-import androidx.annotation.RequiresApi
+import android.support.annotation.RequiresApi
 import com.otaliastudios.opengl.types.FloatBuffer
 import java.nio.Buffer
 
